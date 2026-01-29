@@ -4,15 +4,19 @@
   <meta charset="UTF-8">
   <title>Nathalie & Sébastien</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-<!-- Background music (optional) -->
+<!-- Optional background music -->
 <audio id="bg-music" src="music.mp3" loop></audio>
 
-<!-- SLIDE 1 – HERO -->
+<!-- SLIDE 1 — HERO -->
 <section class="slide active" style="background-image:url('photo1.jpg')">
   <div class="content">
     <h1>Nathalie & Sébastien</h1>
@@ -21,7 +25,7 @@
   </div>
 </section>
 
-<!-- SLIDE 2 – INVITATION TEXT 1 -->
+<!-- SLIDE 2 — INVITATION TEXT -->
 <section class="slide" style="background-image:url('photo2.jpg')">
   <div class="content">
     <p class="text">
@@ -31,42 +35,55 @@
   </div>
 </section>
 
-<!-- SLIDE 3 – INVITATION TEXT 2 -->
+<!-- SLIDE 3 — INVITATION CONTINUATION -->
 <section class="slide" style="background-image:url('photo3.jpg')">
   <div class="content">
     <p class="text">
-      We are pleased to invite you to our wedding ceremony and reception.
+      Which is why we are pleased to invite you to our wedding ceremony and reception.
     </p>
     <button onclick="next()">Next</button>
   </div>
 </section>
 
-<!-- SLIDE 4 – WEDDING DETAILS -->
+<!-- SLIDE 4 — WEDDING DETAILS -->
 <section class="slide" style="background-image:url('photo4.jpg')">
   <div class="content">
     <h2>The Wedding</h2>
-    <p>
+
+    <div class="details">
       Saturday, June 14, 2026<br>
       Ceremony at 3:30 PM<br><br>
+
       Château de Provence<br>
-      <a href="https://maps.google.com" target="_blank">View Map</a>
-    </p>
+      Provence, France
+    </div>
+
+    <a class="map-link" href="https://maps.google.com" target="_blank">
+      LOCATION MAP
+    </a>
+
     <button onclick="next()">RSVP</button>
   </div>
 </section>
 
-<!-- SLIDE 5 – RSVP -->
+<!-- SLIDE 5 — RSVP -->
 <section class="slide" style="background-image:url('photo1.jpg')">
   <div class="content">
     <h2>RSVP</h2>
-    <a class="rsvp" href="https://forms.gle/YOUR_GOOGLE_FORM" target="_blank">
-      Respond Here
+
+    <p class="text">
+      Kindly let us know if you will be joining us on our special day.
+    </p>
+
+    <a class="map-link" href="https://forms.gle/YOUR_GOOGLE_FORM_LINK" target="_blank">
+      RESPOND HERE
     </a>
+
     <button onclick="next()">Next</button>
   </div>
 </section>
 
-<!-- SLIDE 6 – ENDING -->
+<!-- SLIDE 6 — ENDING -->
 <section class="slide" style="background-image:url('photo2.jpg')">
   <div class="content">
     <p class="text">
@@ -75,6 +92,8 @@
   </div>
 </section>
 
+<!-- Script -->
 <script src="script.js"></script>
+
 </body>
 </html>
