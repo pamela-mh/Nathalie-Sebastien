@@ -1,109 +1,94 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nathalie & Sébastien</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-html, body {
-  height: 100%;
-  overflow: hidden;
-  font-family: 'Playfair Display', serif;
-  background: #f6f3ee;
-}
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-.slide {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
+<!-- SLIDE 1 — HERO -->
+<section class="slide active">
+  <div class="card">
+    <img src="photo1.jpg" alt="">
+    <div class="overlay">
+      <h1>Nathalie & Sébastien</h1>
+      <p class="subtitle">A French Love Story</p>
+    </div>
+  </div>
+  <button class="slide-btn" onclick="next()">Start</button>
+</section>
 
-.slide.active {
-  opacity: 1;
-  z-index: 1;
-}
+<!-- SLIDE 2 — INVITATION TEXT -->
+<section class="slide">
+  <div class="card">
+    <img src="photo2.jpg" alt="">
+    <div class="overlay">
+      <p class="text">
+        Priceless moments in life are meant to be celebrated in the presence of the ones you love.
+      </p>
+    </div>
+  </div>
+  <button class="slide-btn" onclick="next()">Next</button>
+</section>
 
-/* Card / photo layout */
-.card {
-  width: 80%;
-  max-width: 520px;
-  position: relative;
-}
+<!-- SLIDE 3 — INVITATION CONTINUATION -->
+<section class="slide">
+  <div class="card">
+    <img src="photo2.jpg" alt="">
+    <div class="overlay">
+      <p class="text">
+        We are pleased to invite you to our wedding ceremony and reception.
+      </p>
+    </div>
+  </div>
+  <button class="slide-btn" onclick="next()">Next</button>
+</section>
 
-.card img {
-  width: 100%;
-  border-radius: 4px;
-}
+<!-- SLIDE 4 — WEDDING DETAILS -->
+<section class="slide">
+  <div class="details-card">
+    <h2>When</h2>
+    <img src="calendar.jpg" alt="July 19">
 
-/* Text overlay on photo */
-.overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: white;
-  padding: 40px;
-  pointer-events: none; /* allow button clicks */
-}
+    <h2>Where</h2>
+    <a href="https://maps.google.com" target="_blank">
+      <img src="map.jpg" alt="Map location">
+    </a>
 
-button {
-  margin-top: 20px;
-  padding: 10px 32px;
-  background: #c6b27c;
-  border: none;
-  border-radius: 30px;
-  color: white;
-  font-size: 1rem;
-  cursor: pointer;
-  position: relative;
-  z-index: 2;
-  pointer-events: auto; /* make button clickable */
-}
+    <h2>Timeline</h2>
+    <img src="timeline.jpg" alt="Timeline">
+  </div>
+  <button class="slide-btn" onclick="next()">RSVP</button>
+</section>
 
-h1 {
-  font-size: 2.8rem;
-  margin-bottom: 10px;
-}
+<!-- SLIDE 5 — RSVP -->
+<section class="slide">
+  <div class="details-card">
+    <h2>RSVP</h2>
+    <form>
+      <input type="text" placeholder="Name" required>
+      <input type="email" placeholder="Email" required>
+      <textarea placeholder="Message (optional)"></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+  <button class="slide-btn" onclick="next()">Next</button>
+</section>
 
-.subtitle {
-  font-style: italic;
-  margin-bottom: 20px;
-}
+<!-- SLIDE 6 — ENDING -->
+<section class="slide">
+  <div class="card">
+    <img src="photo1.jpg" alt="">
+    <div class="overlay">
+      <p class="text">And they lived happily ever after.</p>
+    </div>
+  </div>
+</section>
 
-.text {
-  font-size: 1.6rem;
-  line-height: 1.6;
-}
-
-/* Details card (slide 4 & 5) */
-.details-card {
-  width: 80%;
-  max-width: 520px;
-  text-align: center;
-}
-
-.details-card h2 {
-  margin: 30px 0 15px;
-  letter-spacing: 1px;
-}
-
-.details-card img {
-  width: 100%;
-  margin-bottom: 20px;
-  border-radius: 4px;
-}
-
-input, textarea {
-  width: 100%;
-  margin: 10px 0;
-  padding: 10px;
-  font-family: inherit;
-  font-size: 1rem;
-}
+<script src="script.js"></script>
+</body>
+</html>
