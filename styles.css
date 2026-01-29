@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden; /* 🚫 disables scrolling */
+  font-family: 'Playfair Display', serif;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.slide::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.35);
+}
+
+.content {
+  position: relative;
+  color: white;
+  text-align: center;
+  max-width: 700px;
+  padding: 30px;
+}
+
+h1 {
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 2.2rem;
+  margin-bottom: 15px;
+}
+
+.subtitle {
+  font-style: italic;
+  margin-bottom: 30px;
+}
+
+.text {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+button, .rsvp {
+  margin-top: 30px;
+  padding: 12px 35px;
+  background: #c6b27c;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: none;
+}
