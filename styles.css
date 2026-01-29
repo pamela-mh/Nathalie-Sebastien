@@ -27,24 +27,26 @@ html, body {
   z-index: 1;
 }
 
-/* Card / photo layout */
+/* Card layout */
 .card {
   width: 80%;
-  max-width: 520px;
+  max-width: 567px;  /* 15cm approx */
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card img {
+.card img, .details-card img {
   width: 100%;
-  max-height: 350px; /* Reduced height for all slides */
+  max-width: 567px;  /* 15cm */
+  max-height: 720px; /* 19cm */
   object-fit: cover;
   border-radius: 4px;
+  margin-bottom: 15px;
 }
 
-/* Text overlay on photo */
+/* Overlay text */
 .overlay {
   position: absolute;
   inset: 0;
@@ -57,7 +59,7 @@ html, body {
   padding: 30px;
 }
 
-/* Slide buttons (inside card, always visible) */
+/* Buttons */
 .slide-btn {
   margin-top: 15px;
   padding: 12px 36px;
@@ -81,12 +83,14 @@ h1 {
   margin-bottom: 20px;
 }
 
-.text {
+/* Slide 2 text (lighter, structured) */
+.slide:nth-child(2) .text {
+  font-weight: 400;       /* lighter */
+  line-height: 2;         /* more spacing */
   font-size: 1.6rem;
-  line-height: 1.6;
 }
 
-/* Details cards (slides 3–6) */
+/* Details cards */
 .details-card {
   text-align: center;
 }
@@ -94,14 +98,6 @@ h1 {
 .details-card h2 {
   margin: 20px 0 10px;
   letter-spacing: 1px;
-}
-
-.details-card img {
-  width: 100%;
-  max-height: 300px; /* keep images smaller for buttons */
-  object-fit: cover;
-  margin-bottom: 15px;
-  border-radius: 4px;
 }
 
 input, textarea {
