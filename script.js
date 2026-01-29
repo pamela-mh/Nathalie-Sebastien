@@ -8,3 +8,9 @@ function next() {
     slides[current].classList.add('active');
   }
 }
+
+// Optional: play music automatically on page load
+window.onload = () => {
+  const music = document.getElementById('bg-music');
+  music.play().catch(() => {});
+};
